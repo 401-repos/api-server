@@ -6,9 +6,8 @@
 
 ### Links and Resources
 
-- [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
+- [ci/cd](https://github.com/401-repos/api-server/actions)
+- [back-end server url](https://api-server-0.herokuapp.com/)
 
 ### Setup
 
@@ -21,15 +20,11 @@ i.e.
 
 #### How to initialize/run your application (where applicable)
 
-- e.g. `npm start`
-
-#### How to use your library (where applicable)
+- `npm start`
 
 #### Tests
 
-- How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
+- `npm test`
 
 #### UML
 
