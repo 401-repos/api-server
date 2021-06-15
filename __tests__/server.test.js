@@ -63,7 +63,7 @@ describe('Testing server', () => {
             name: "carrots",
             discription:"Color orange"
         });
-        expect(test204.status).toEqual(204);
+        expect(test204.status).toEqual(200);
     });
     it('should give status of 204 if updated clothes succeeded', async () => {
         const arr = await clothes.read();
@@ -72,20 +72,20 @@ describe('Testing server', () => {
             naem: "underwear",
             price:2
         });
-        expect(test204.status).toEqual(204);
+        expect(test204.status).toEqual(200);
     });
     it('should give status of 204 if deleting food succeeded', async () => {
         const arr = await foods.read();
         const id = arr[0]._id;
         const test204 = await testServer.delete(`/clothes/${id}`);
-        expect(test204.status).toEqual(204);
+        expect(test204.status).toEqual(200);
     });
     it('should give status of 204 if deleting clothes succeeded', async () => {
         await clothes.add({name:'bloza', discription:"new item" , price:70})
         const arr = await clothes.read();
         const id = arr[0]._id;
         const test204 = await testServer.delete(`/food/${id}`);
-        expect(test204.status).toEqual(204);
+        expect(test204.status).toEqual(200);
     });
     it('should give status of 200 if read clothes with id succeeded', async () => {
         await clothes.add({name:'bloza', discription:"in stock", price: 30})
