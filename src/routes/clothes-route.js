@@ -24,11 +24,11 @@ async function createHandler(req, res) {
 }
 async function updateHandler(req, res) {
     const upadtedObj = await clothesDB.update(req.params.id, req.body);
-    res.status(204).json(upadtedObj);
+    res.status(200).json(upadtedObj);
 }
 async function deleteHandler(req, res) {
     const deletedObj = await clothesDB.delete(req.params.id);
-    res.status(204).json(deletedObj);
+    res.status(200).json(deletedObj);
 }
 
 module.exports = router;
