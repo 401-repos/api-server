@@ -6,7 +6,8 @@ const errorHandler = require('./error/500.js');
 const notFoundHandler = require('./error/404.js');
 const clothesRoute = require('./routes/clothes-route.js');
 const foodRoute = require('./routes/food-route.js');
-
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
 app.use(errorHandler);
 app.use('/', clothesRoute);
