@@ -8,6 +8,7 @@ const clothesRoute = require('./routes/clothes-route.js');
 const foodRoute = require('./routes/food-route.js');
 const todoRoute = require('./routes/todo-routes');
 const productRouter = require('./routes/product-route');
+const termsRouter = require('./routes/terms');
 const cors = require('cors');
 app.use(cors());
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use('/', clothesRoute);
 app.use('/', foodRoute);
 app.use('/', todoRoute);
 app.use('/', productRouter);
+app.use('/', termsRouter);
 
 app.get('/', (req, res) => {
   res.send('Welcome Home!');
